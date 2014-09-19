@@ -48,7 +48,7 @@ def deploy_master_branch(request, build_id):
 
 
 @csrf_exempt
-def fa(request):
+def github_webhook(request):
     try:
         event = request.META['HTTP_X_GITHUB_EVENT']
     except KeyError:
